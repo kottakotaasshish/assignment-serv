@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script src="https://s3.amazonaws.com/open-to-cors/assignment.json"></script>
+</head>
+
+<body>
+    <div class="mypanel"></div>
+
+    <script>
+    $.getJSON('http://time.jsontest.com', function(data) {
+        
+        var text = `Sub category: ${data.subcategory}<br>
+                    Time: ${data.title}<br>
+                    price: ${data.price}
+                    popularity:${data.popularity}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+var sortable = [];
+for (var vehicle in maxSpeed) {
+    sortable.push([vehicle, maxSpeed[vehicle]]);
+}
+
+sortable.sort(function(a, b) {
+    return a[1] - b[1];
+});
+var objSorted = {}
+sortable.forEach(function(item){
+    objSorted[item[0]]=item[1]
+})
+
+    </script>
+    
+</body>
+</html>
